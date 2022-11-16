@@ -1,25 +1,25 @@
 export type TEmployment = "Full time" | "Temporary" | "Part time"
 
-export type TJobList = IJobDetails[]
-
 export interface ILocation {
-  lat: Number
-  long: Number
+  lat: number
+  long: number
 }
 
 export interface IJobDetails {
-        id: String
-        name: String
-        email: String
-        phone: String
-        title: String
-        salary: String
-        address: String
-        benefits: [String]
+        id: string
+        name: string
+        email: string
+        phone: string
+        title: string
+        salary: string
+        address: string
+        benefits: string[]
         location: ILocation
-        pictures: [String]
-        createdAt: String
-        updatedAt: String
-        description: String
+        pictures: string[]
+        createdAt: string
+        updatedAt: string
+        description: string
         employment_type: [TEmployment]
 }
+
+export type TJobList = IJobDetails[]

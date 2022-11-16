@@ -1,1 +1,1 @@
-export type { ILocation, IJobDetails } from './job'
+export type { ILocation, IJobDetails, TJobList  } from './job'
