@@ -1,4 +1,4 @@
-export type TEmplayment = "Full time" | "Temporary" | "Part time"
+export type TEmployment = "Full time" | "Temporary" | "Part time"
 
 export type TJobList = IJobDetails[]
 
@@ -21,5 +21,5 @@ export interface IJobDetails {
         createdAt: String
         updatedAt: String
         description: String
-        employment_type: [TEmplayment]
+        employment_type: [TEmployment]
 }
