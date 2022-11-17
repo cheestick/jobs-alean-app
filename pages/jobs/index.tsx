@@ -1,3 +1,5 @@
+import Container from 'components/Container'
+import JobCard from 'components/JobCard'
 import { TJobList } from 'types'
 
 export async function getServerSideProps() {
@@ -24,12 +26,15 @@ type TJobsProps = {
 }
 
 const Jobs = ({ data }: TJobsProps) => {
+  console.log(data);
   
   return (
-    <>
-      <h1>Jobs List</h1>
-      {data.map((job) => <div key={job.id}>{ job.name}</div>)}
-    </>
+    <Container>
+      <h1 className='text-4xl'>Jobs List</h1>
+      {data.map(
+        (job) => <JobCard key={job.id} jobDetails={job} />)
+      }
+    </Container>
   )
 }
 
