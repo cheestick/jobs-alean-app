@@ -6,7 +6,7 @@ interface IContainerProps {
 
 const Container: FC<IContainerProps> = ({ children }) => {
   return (
-    <div className='mx-auto sm:max-w-screen-lg'>
+    <div className='mx-auto sm:max-w-screen-xl'>
       {children}
     </div>
   )

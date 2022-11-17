@@ -4,7 +4,7 @@ import { TJobList } from 'types'
 
 export async function getServerSideProps() {
   const response = await fetch(
-    process.env.API_PATH as string,
+    `${process.env.API_PATH}`,
     {
       headers:
       {
@@ -31,9 +31,11 @@ const Jobs = ({ data }: TJobsProps) => {
   return (
     <Container>
       <h1 className='text-4xl'>Jobs List</h1>
-      {data.map(
-        (job) => <JobCard key={job.id} jobDetails={job} />)
-      }
+      <div className='flex flex-col flex-1 gap-2'>
+        {data.map(
+          (job) => <JobCard key={job.id} jobDetails={job} />)
+        }
+      </div>
     </Container>
   )
 }
