@@ -1,4 +1,4 @@
-import { TJobList } from '../../types'
+import { TJobList } from 'types'
 
 export async function getServerSideProps() {
   const response = await fetch(
