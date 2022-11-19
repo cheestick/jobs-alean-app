@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/proximanova/proximanova-bold.woff");
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/proximanova/proximanova-semibold.woff");
+    font-weight: 700;
+  }
+ 
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/proximanova/proximanova-regular.woff");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/proximanova/proximanova-light.woff");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/roboto/roboto-regular.ttf");
+    font-weight: 400;
+  }
+
+  html {
+    @apply font-roboto;
+  }
+}

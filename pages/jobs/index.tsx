@@ -25,9 +25,7 @@ type TJobsProps = {
   data: TJobList
 }
 
-const Jobs = ({ data }: TJobsProps) => {
-  console.log(data);
-  
+const Jobs = ({ data }: TJobsProps) => {  
   return (
     <Container>
       <h1 className='text-4xl'>Jobs List</h1>
