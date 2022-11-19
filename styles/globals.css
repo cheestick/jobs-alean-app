@@ -41,4 +41,18 @@
   html {
     @apply font-roboto text-main;
   }
+
+  address {
+    @apply font-proximaNova font-normal not-italic;
+  }
+}
+
+@layer utilities {
+  .visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
 }
