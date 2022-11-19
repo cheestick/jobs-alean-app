@@ -1,5 +1,5 @@
 import Container from 'components/Container'
-import JobCard from 'components/JobCard'
+import JobBar from 'components/JobBar'
 import { TJobList } from 'types'
 
 export async function getServerSideProps() {
@@ -21,21 +21,23 @@ export async function getServerSideProps() {
   }
 }
 
-type TJobsProps = {
+type TJobListProps = {
   data: TJobList
 }
 
-const Jobs = ({ data }: TJobsProps) => {  
+const JobList = ({ data }: TJobListProps) => {  
   return (
-    <Container>
-      <h1 className='text-4xl'>Jobs List</h1>
-      <div className='flex flex-col flex-1 gap-2'>
-        {data.map(
-          (job) => <JobCard key={job.id} jobDetails={job} />)
-        }
-      </div>
-    </Container>
+    <main className='pt-[9px] pb-[17px] bg-main-backdrop'>
+      <Container>
+        <h1 className='visually-hidden text-4xl' aria-hidden>Job List</h1>
+        <div className='flex flex-col flex-1 gap-2'>
+          {data.map(
+            (job) => <JobBar key={job.id} jobDetails={job} />)
+          }
+        </div>
+      </Container>
+    </main>
   )
 }
 
-export default Jobs
+export default JobList
