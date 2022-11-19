@@ -39,6 +39,6 @@
   }
 
   html {
-    @apply font-roboto;
+    @apply font-roboto text-main;
   }
 }
