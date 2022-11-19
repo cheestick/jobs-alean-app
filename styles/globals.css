@@ -7,30 +7,35 @@
   @font-face {
     font-family: "Proxima Nova";
     src: url("/fonts/proximanova/proximanova-bold.woff");
-    font-weight: 900;
+    font-weight: 700;
+    font-display: optional;
   }
-
+  
   @font-face {
     font-family: "Proxima Nova";
     src: url("/fonts/proximanova/proximanova-semibold.woff");
-    font-weight: 700;
+    font-weight: 600;
+    font-display: optional;
   }
- 
+  
   @font-face {
     font-family: "Proxima Nova";
     src: url("/fonts/proximanova/proximanova-regular.woff");
     font-weight: 400;
+    font-display: optional;
   }
   @font-face {
     font-family: "Proxima Nova";
     src: url("/fonts/proximanova/proximanova-light.woff");
     font-weight: 300;
+    font-display: optional;
   }
-
+  
   @font-face {
     font-family: "Roboto";
     src: url("/fonts/roboto/roboto-regular.ttf");
     font-weight: 400;
+    font-display: optional;
   }
 
   html {
