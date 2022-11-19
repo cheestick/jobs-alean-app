@@ -41,7 +41,7 @@ module.exports = {
         button: {
           DEFAULT: "#384564",
           arrow: "#384564",
-          backdrop: "#384564", // opacity: 0.14;
+          backdrop: "#38456424", // opacity: 0.14;
           name: "#3A4562",
         },
         divider: {
@@ -56,6 +56,7 @@ module.exports = {
         },
         location: {
           DEFAULT: "#D8D8D8",
+          transparent: "#FFFFFF5C",
         },
         main: {
           DEFAULT: "#3A4562",
