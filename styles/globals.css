@@ -39,11 +39,11 @@
   }
 
   html {
-    @apply font-roboto text-main;
+    @apply font-proximaNova font-normal text-main;
   }
 
   address {
-    @apply font-proximaNova font-normal not-italic;
+    @apply  not-italic;
   }
 }
 
