@@ -1,5 +1,8 @@
 import { FC } from 'react'
 import { IJobDetails } from 'types'
+import Bookmark from './Bookmark'
+import Raiting from './Raiting'
+import Timestamp from './Timestamp'
 
 interface IJobBarProps {
   jobDetails: IJobDetails
@@ -34,23 +37,9 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
         </address>
       </section>
 
-      <p className='flex flex-1 gap-px'>
-        <span className='text-center w-[10px] h-[10px] sm:w-[19px] sm:h-[19px] text-black bg-gray-200'>*</span>
-        <span className='text-center w-[10px] h-[10px] sm:w-[19px] sm:h-[19px] text-black bg-gray-200'>*</span>
-        <span className='text-center w-[10px] h-[10px] sm:w-[19px] sm:h-[19px] text-black bg-gray-200'>*</span>
-        <span className='text-center w-[10px] h-[10px] sm:w-[19px] sm:h-[19px] text-black bg-gray-200'>*</span>
-        <span className='text-center w-[10px] h-[10px] sm:w-[19px] sm:h-[19px] text-black bg-gray-200'>*</span>
-      </p>
-      
-      <div className='w-8 h-8 bg-gray-500 hidden sm:block'></div>
-
-      <p
-        className='text-timestamp font-light sm:font-normal 
-        text-sm sm:text-base leading-[1.0625rem] sm:leading-[1.5625rem] 
-        tracking-[0.0125rem]'
-      >
-        {updatedAt }
-      </p>
+      <Raiting />
+      <Bookmark />
+      <Timestamp time={ updatedAt } />
     </section>   
   )
 }
