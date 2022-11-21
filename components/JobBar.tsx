@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { IJobDetails } from 'types'
 import Bookmark from './Bookmark'
-import Raiting from './Raiting'
+import Raiting from './Rating/'
 import Timestamp from './Timestamp'
 
 interface IJobBarProps {
@@ -10,6 +10,8 @@ interface IJobBarProps {
 
 const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
   const { id, title, address, name, updatedAt, pictures: [avatarURL] } = jobDetails
+  const [rating, setRating] = useState<number>(0)
+
   return (
     <section
       data-id={id}
@@ -37,7 +39,7 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
         </address>
       </section>
 
-      <Raiting />
+      <Raiting rating={rating} setRating={setRating} />
       <Bookmark />
       <Timestamp time={ updatedAt } />
     </section>   
