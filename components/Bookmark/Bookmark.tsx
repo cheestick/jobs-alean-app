@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Text from 'components/Text'
 import BookmarkIcon from './bookmark.svg'
 import BookmarkStarIcon from './bookmark-star.svg'
 
@@ -16,9 +17,9 @@ const Bookmark: FC<IBookmarkProps> = ({ icon, text = '' }) => {
   }
 
   return (
-    <div className='hidden sm:flex cursor-pointer'>
+    <div className='flex cursor-pointer gap-3 sm:gap-2 items-center '>
       {iconType[icon]}
-      {text && <span>{text}</span>}
+      {text && <Text text={text} />}
     </div>
   )
 }
