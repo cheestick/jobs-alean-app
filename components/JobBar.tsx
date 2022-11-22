@@ -11,6 +11,7 @@ interface IJobBarProps {
 const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
   const { id, title, address, name, updatedAt, pictures: [avatarURL] } = jobDetails
   const [rating, setRating] = useState<number>(0)
+  const [bookmarked, setBookmarked] = useState<boolean>(false)
 
   return (
     <section
@@ -40,7 +41,7 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
       </section>
 
       <Raiting rating={rating} setRating={setRating} />
-      <Bookmark icon='flag' text='Save to my list' />
+      <Bookmark icon='flag' text='Save to my list' checked={bookmarked} setChecked={setBookmarked} />
       <Timestamp time={ updatedAt } />
     </section>   
   )
