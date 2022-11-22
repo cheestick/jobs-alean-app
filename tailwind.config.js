@@ -36,7 +36,7 @@ module.exports = {
         bookmark: {
           DEFAULT: "#70778B",
           unmarked: "#70778B",
-          marked: "##38415D",
+          marked: "#38415D",
         },
         button: {
           DEFAULT: "#384564",
@@ -62,7 +62,7 @@ module.exports = {
           DEFAULT: "#3A4562",
           secondary: "#878D9D",
           backdrop: "#E6E9F2",
-          transparent: "#38415DD1", //rgba(56, 65, 93, 0.82);
+          transparent: "#38415DD1", //D1 rgba(56, 65, 93, 0.82);
           "on-dark": "#E7EAF0",
           "on-dark-secondary": "#E8EBF3",
           "on-dark-transparent": "#FFFFFFAB", // rgba(255, 255, 255, 0.669635);
