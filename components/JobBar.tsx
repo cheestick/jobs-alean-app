@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { IJobDetails } from 'types'
-import Bookmark from './Bookmark'
+import Bookmark from './Bookmark/Bookmark'
 import Raiting from './Rating/'
 import Timestamp from './Timestamp'
 
@@ -40,7 +40,7 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
       </section>
 
       <Raiting rating={rating} setRating={setRating} />
-      <Bookmark />
+      <Bookmark icon='flag' text='Save to my list' />
       <Timestamp time={ updatedAt } />
     </section>   
   )
