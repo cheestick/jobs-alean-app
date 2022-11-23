@@ -8,7 +8,7 @@ type TBookmarkIcon = 'flag' | 'star'
 
 interface IBookmarkProps {
   icon: TBookmarkIcon
-  text: string
+  text?: string
   checked: boolean
   setChecked?: (checked: boolean) => void
 }
