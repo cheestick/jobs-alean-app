@@ -26,8 +26,9 @@ const Bookmark: FC<IBookmarkProps> = ({ icon = 'flag', text = '', checked = fals
   if (!matches) {
     return (
       <div
-          className={`flex ${icon === 'flag' && 'hidden'} cursor-pointer gap-3 sm:gap-2 items-center mr-auto`}
-          onClick={() => setChecked(!checked)}
+        className={`sm:col-start-3 sm:row-start-1
+          flex ${icon === 'flag' && 'hidden'} cursor-pointer gap-3 sm:gap-2 items-center mr-auto`}
+        onClick={() => setChecked(!checked)}
       >
         {iconType[icon]}
         {text && <Text text={text} />}
@@ -37,7 +38,8 @@ const Bookmark: FC<IBookmarkProps> = ({ icon = 'flag', text = '', checked = fals
 
   return (
     <div
-      className='flex cursor-pointer gap-3 sm:gap-2 items-center mr-auto'
+      className='sm:col-start-3 sm:row-start-1
+        flex cursor-pointer gap-3 sm:gap-2 items-center mr-auto'
       onClick={() => setChecked(!checked)}
     >
       {iconType['flag']}

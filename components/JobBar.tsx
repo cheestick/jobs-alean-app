@@ -17,7 +17,8 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
   return (
     <section
       data-id={id}
-      className='rounded-lg px-4 pt-[13px] pb-[27px] sm:py-6 
+      className='grid grid-cols-[66px_auto] gap-x-[19px] 
+      rounded-lg px-4 pt-[13px] pb-[27px] sm:py-6 
         shadow-mobile sm:shadow-desktop sm:text-md
         bg-job-bar sm:bg-job-bar-white'
     >

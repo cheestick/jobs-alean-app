@@ -37,7 +37,10 @@ const Raiting: FC<IRatingProps> = ({ rating, setRating }) => {
   const setNewRating = (i: number) => setRating && setRating(i)
 
   return (
-    <div className='flex flex-1'>
+    <div
+      className='col-start-2 row-start-1 my-auto 
+        flex flex-1'
+    >
       {ratingArray.map((rate, idx) => (
         <span key={idx}>
           {rate}
