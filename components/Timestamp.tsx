@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
 
 interface ITimestampProps {
   time: string
@@ -7,12 +8,12 @@ interface ITimestampProps {
 const Timestamp: FC<ITimestampProps> = ({ time }) => {
   return (
     <p
-      className='col-start-2 row-start-1 place-self-end
+      className='sm:min-w-max sm:w-[145px]
         text-timestamp font-light sm:font-normal 
         text-sm sm:text-base leading-[1.0625rem] sm:leading-[1.5625rem] 
         tracking-[0.0125rem]'
-    >
-      { time }
+    > 
+      Posted {formatDistanceToNowStrict(new Date(time)) } ago
     </p>
   )
 }

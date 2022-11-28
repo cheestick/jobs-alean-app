@@ -23,29 +23,27 @@ const Bookmark: FC<IBookmarkProps> = ({ icon = 'flag', text = '', checked = fals
     star: <BookmarkStarIcon className={checkedState}/>,
   }
 
-  if (!matches) {
     return (
       <div
-        className={`sm:col-start-3 sm:row-start-1
-          flex ${icon === 'flag' && 'hidden'} cursor-pointer gap-3 sm:gap-2 items-center mr-auto`}
+        className={`sm:mr-0 sm:self-end
+          flex ${icon === 'flag' && !matches && 'hidden'} cursor-pointer gap-3 sm:gap-2 items-center mr-auto`}
         onClick={() => setChecked(!checked)}
       >
-        {iconType[icon]}
+        {matches ? iconType['flag'] : iconType[icon]}
         {text && <Text text={text} />}
       </div>
     )
-  }
 
-  return (
-    <div
-      className='sm:col-start-3 sm:row-start-1
-        flex cursor-pointer gap-3 sm:gap-2 items-center mr-auto'
-      onClick={() => setChecked(!checked)}
-    >
-      {iconType['flag']}
-      {text && <Text text={text} />}
-    </div>
-  )
+  // return (
+  //   <div
+  //     className='sm:mr-0
+  //       flex cursor-pointer gap-3 sm:gap-2 items-center mr-auto'
+  //     onClick={() => setChecked(!checked)}
+  //   >
+  //     {iconType['flag']}
+  //     {text && <Text text={text} />}
+  //   </div>
+  // )
 }
 
 export default Bookmark

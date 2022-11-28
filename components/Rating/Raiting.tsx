@@ -38,8 +38,8 @@ const Raiting: FC<IRatingProps> = ({ rating, setRating }) => {
 
   return (
     <div
-      className='col-start-2 row-start-1 my-auto 
-        flex flex-1'
+      className='flex 
+      my-auto sm:mx-9'
     >
       {ratingArray.map((rate, idx) => (
         <span key={idx}>

@@ -17,15 +17,22 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
   return (
     <section
       data-id={id}
-      className='grid grid-cols-[66px_auto] gap-x-[19px] 
-      rounded-lg px-4 pt-[13px] pb-[27px] sm:py-6 
+      className='flex flex-col-reverse gap-y-[14px] 
+        sm:flex-row sm:flex-1 sm:justify-between
+        min-w-[396px] sm:min-w-fit rounded-lg px-4 pt-[13px] pb-[27px] sm:py-6 
         shadow-mobile sm:shadow-desktop sm:text-md
-        bg-job-bar sm:bg-job-bar-white'
+        bg-job-bar sm:bg-job-bar-white '
     >
       <CompanyBriefInfo briefInfo={jobDetails} />
-      <Raiting rating={rating} setRating={setRating} />
-      <Bookmark icon='flag' checked={bookmarked} setChecked={setBookmarked} />
-      <Timestamp time={ updatedAt } />
+      <div className='flex justify-between ml-[calc(66px+19px)] sm:ml-0'>
+        <Raiting rating={rating} setRating={setRating} />
+        <div
+          className='sm:flex sm:flex-col sm:justify-between'
+        >
+          <Bookmark icon='flag' checked={bookmarked} setChecked={setBookmarked} />
+          <Timestamp time={ updatedAt } />
+        </div>
+      </div>
     </section>   
   )
 }
