@@ -42,6 +42,10 @@
     @apply font-proximaNova font-normal text-main;
   }
 
+  /* body {
+    @apply min-w-[400px] sm:min-w-full
+  } */
+
   address {
     @apply  not-italic;
   }
