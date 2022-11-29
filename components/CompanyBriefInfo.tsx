@@ -12,7 +12,7 @@ const CompanyBriefInfo: FC<ICompanyBriefInfoProps> = ({ briefInfo }) => {
   const { name, title, address, pictures: [imageURL] } = briefInfo
   return (
     <section className='
-      flex flex-row-reverse flex-initial gap-x-[19px] sm:gap-x-[26px]'
+      flex flex-row-reverse justify-end gap-x-[19px] sm:gap-x-[26px]'
     >
      <div className='flex flex-col sm:gap-y-2'> 
         <h2 className='sm:min-w-[35ch]
