@@ -19,7 +19,7 @@ const JobBar: FC<IJobBarProps> = ({ jobDetails }) => {
       data-id={id}
       className='flex flex-col-reverse gap-y-[14px] 
         sm:flex-row sm:flex-1 sm:justify-between
-        min-w-[396px] sm:min-w-fit rounded-lg px-4 pt-[13px] pb-[27px] sm:py-6 
+        min-w-[390px] sm:min-w-fit rounded-lg px-4 pt-[13px] pb-[27px] sm:py-6 
         shadow-mobile sm:shadow-desktop sm:text-md
         bg-job-bar sm:bg-job-bar-white '
     >
