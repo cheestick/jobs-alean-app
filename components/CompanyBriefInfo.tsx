@@ -35,4 +35,4 @@ const CompanyBriefInfo: FC<ICompanyBriefInfoProps> = ({ briefInfo }) => {
   )
 }
 
-export default CompanyBriefInfo               
+export default CompanyBriefInfo
