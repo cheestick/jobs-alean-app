@@ -4,6 +4,7 @@ import Text from 'components/Text'
 import BookmarkIcon from './bookmark.svg'
 import BookmarkStarIcon from './bookmark-star.svg'
 
+
 type TBookmarkIcon = 'flag' | 'star'
 
 interface IBookmarkProps {
@@ -16,7 +17,7 @@ interface IBookmarkProps {
 const Bookmark: FC<IBookmarkProps> = ({ icon = 'flag', text = '', checked = false, setChecked = () => { }  }) => {
   const checkedState = `${checked ?'stroke-bookmark-marked fill-bookmark-marked': 'stroke-bookmark fill-none'} stroke-2`
 
-  const matches = useMediaQuery('(min-width: 640px)')
+  const matches = useMediaQuery('(min-width: 895px)')
 
   const iconType = {
     flag: <BookmarkIcon className={checkedState} />,
