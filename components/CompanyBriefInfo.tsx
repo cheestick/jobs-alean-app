@@ -22,7 +22,7 @@ const CompanyBriefInfo: FC<ICompanyBriefInfoProps> = ({ briefInfo }) => {
           {title}
         </h2>
         <p className='text-base leading-[1.5625rem] text-main-secondary tracking-[0.015rem] mb-[7px] sm:mb-0'>
-          Department name &#183; {name}
+          Department name <span>&#183;</span> {name}
         </p>
         <CompanyAddress address={address} />
       </div>
@@ -31,4 +31,4 @@ const CompanyBriefInfo: FC<ICompanyBriefInfoProps> = ({ briefInfo }) => {
   )
 }
 
-export default CompanyBriefInfo
+export default CompanyBriefInfo               
